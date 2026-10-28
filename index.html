@@ -119,15 +119,14 @@
     .proj p{margin:0 0 14px;color:var(--soft);font-size:15px}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
     .tags li{font-size:13px;padding:3px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--soft)}
-    .proj .cover{background:var(--ink);color:var(--chalk);display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
-    .proj .cover::after{content:none}
-    .proj .cover b{font:800 clamp(40px,4.5vw,60px)/1 var(--serif);color:var(--aqua)}
-    .proj .cover span{font-size:14px;color:#b9c6d3;margin-top:8px}
     .proj img{object-position:top}
-    .proj-links{display:flex;gap:18px;margin:16px 0 0}
-    .proj-links a{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none;padding-bottom:2px;border-bottom:2px solid var(--lane);transition:border-color .3s}
-    .proj-links a:hover{border-color:var(--ink)}
-    .proj-links a + a{font-weight:500;color:var(--soft);border-bottom-color:var(--rule)}
+    .proj{display:flex;flex-direction:column}
+    .proj .tags{margin-top:auto}
+    .proj-links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+    .proj-links .btn{padding:10px 18px;font-size:14px}
+    .btn{transition:transform .4s cubic-bezier(.32,.72,0,1),box-shadow .4s cubic-bezier(.32,.72,0,1),background .3s}
+    .btn.solid:hover{box-shadow:0 10px 24px -12px var(--lane)}
+    .proj .ph{display:block}
     .proj .ph img{transition:transform .9s cubic-bezier(.32,.72,0,1)}
     .proj:hover .ph img{transform:scale(1.035)}
     .proj.feature{grid-column:span 2}
@@ -285,46 +284,46 @@
         </figure>
         <div class="work">
           <article class="proj">
-            <figure class="ph" data-file="images/aloud.jpg"><img src="images/aloud.jpg" alt="Aloud app screenshot" onerror="this.remove()"></figure>
+            <a class="ph" href="https://zachthedude.github.io/aloud/" tabindex="-1" aria-hidden="true"><img src="images/aloud.jpg" alt="" loading="lazy"></a>
             <h3>Aloud</h3>
-            <p>A voice-first learning platform. Upload your study material and it becomes a teacher that explains each idea out loud, asks questions, listens to your answers and adapts.</p>
+            <p>A voice-first learning platform. Upload your study material and it becomes a teacher that explains each idea out loud, asks questions, listens to your answers and adapts. The live demo runs the real server inside your browser.</p>
             <ul class="tags"><li>Python</li><li>FastAPI</li><li>Speech</li><li>Education</li></ul>
-            <p class="proj-links"><a href="https://zachthedude.github.io/aloud/">Try the demo <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/aloud">Code</a></p>
+            <p class="proj-links"><a class="btn solid" href="https://zachthedude.github.io/aloud/" aria-label="Check out Aloud">Check it out <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/zachthedude/aloud" aria-label="Aloud source code on GitHub">Code</a></p>
           </article>
           <article class="proj">
-            <figure class="ph" data-file="images/signwave.jpg"><img src="images/signwave.jpg" alt="Signwave app screenshot" onerror="this.remove()"></figure>
+            <a class="ph" href="https://zachthedude.github.io/signwave/" tabindex="-1" aria-hidden="true"><img src="images/signwave.jpg" alt="" loading="lazy"></a>
             <h3>Signwave</h3>
-            <p>Play music with your hands. A webcam reads hand signs and turns them into synth, bass and guitar notes in real time.</p>
+            <p>Play music with your hands. A webcam reads hand signs and turns them into synth, bass and guitar notes in real time, with sing-along songs and a song writer. No camera? Watch the bot play.</p>
             <ul class="tags"><li>Computer vision</li><li>Web Audio</li></ul>
-            <p class="proj-links"><a href="https://zachthedude.github.io/signwave/">Play it <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/signwave">Code</a></p>
+            <p class="proj-links"><a class="btn solid" href="https://zachthedude.github.io/signwave/" aria-label="Check out Signwave">Check it out <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/zachthedude/signwave" aria-label="Signwave source code on GitHub">Code</a></p>
           </article>
           <article class="proj">
-            <div class="ph cover" aria-hidden="true"><b>4 waves</b><span>3, 4, 6, 8 enemies</span></div>
+            <a class="ph" href="https://zachthedude.github.io/ArenaSlice/" tabindex="-1" aria-hidden="true"><img src="images/arenaslice.jpg" alt="" loading="lazy"></a>
             <h3>ArenaSlice</h3>
-            <p>A first-person arena shooter in Unity with sliding movement, enemy AI that sees and hears you, and four waves to survive.</p>
+            <p>A first-person arena shooter in Unity with sliding movement, enemy AI that sees and hears you, and four waves to survive. Its page lets you try the jump physics, enemy hearing and weapon falloff.</p>
             <ul class="tags"><li>Unity</li><li>C#</li><li>Game design</li></ul>
-            <p class="proj-links"><a href="https://zachthedude.github.io/ArenaSlice/">How it plays <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/ArenaSlice">Code</a></p>
+            <p class="proj-links"><a class="btn solid" href="https://zachthedude.github.io/ArenaSlice/" aria-label="Check out ArenaSlice">Check it out <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/zachthedude/ArenaSlice" aria-label="ArenaSlice source code on GitHub">Code</a></p>
           </article>
           <article class="proj">
-            <div class="ph cover" aria-hidden="true"><b>4–12 Hz</b><span>tremor cancelled, intent followed</span></div>
+            <a class="ph" href="https://zachthedude.github.io/steady-utensil/" tabindex="-1" aria-hidden="true"><img src="images/steady.jpg" alt="" loading="lazy"></a>
             <h3>Steady Utensil</h3>
-            <p>A 3D-printed self-stabilising spoon for people with hand tremors. It cancels the shake but still follows the hand to the mouth.</p>
+            <p>Control firmware for a 3D-printed self-stabilising spoon for people with hand tremors. It cancels the shake but follows the hand to the mouth: −17.5 dB of tremor in simulation.</p>
             <ul class="tags"><li>Hardware</li><li>Firmware</li><li>Accessibility</li></ul>
-            <p class="proj-links"><a href="https://zachthedude.github.io/steady-utensil/">See it work <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/steady-utensil">Code</a></p>
+            <p class="proj-links"><a class="btn solid" href="https://zachthedude.github.io/steady-utensil/" aria-label="Check out Steady Utensil">Check it out <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/zachthedude/steady-utensil" aria-label="Steady Utensil source code on GitHub">Code</a></p>
           </article>
           <article class="proj">
-            <figure class="ph" data-file="images/lifequest.jpg"><img src="images/lifequest.jpg" alt="LifeQuest app screenshot" onerror="this.remove()"></figure>
+            <a class="ph" href="https://zachthedude.github.io/LifeQuest/" tabindex="-1" aria-hidden="true"><img src="images/lifequest.jpg" alt="" loading="lazy"></a>
             <h3>LifeQuest</h3>
-            <p>Real life as a game. Earn XP for real actions in fitness, learning and building, from level 1 to 100.</p>
+            <p>Real life as a game. Earn XP for real actions in fitness, learning and building, from level 1 to 100, with proof required before XP is awarded. The live demo runs the real server inside your browser.</p>
             <ul class="tags"><li>Python</li><li>Web app</li></ul>
-            <p class="proj-links"><a href="https://zachthedude.github.io/LifeQuest/">Try the demo <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/LifeQuest">Code</a></p>
+            <p class="proj-links"><a class="btn solid" href="https://zachthedude.github.io/LifeQuest/" aria-label="Check out LifeQuest">Check it out <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/zachthedude/LifeQuest" aria-label="LifeQuest source code on GitHub">Code</a></p>
           </article>
           <article class="proj">
-            <figure class="ph" data-file="images/abbf.jpg"><img src="images/abbf.jpg" alt="Adventures Beyond Barriers Foundation website" onerror="this.remove()"></figure>
+            <a class="ph" href="https://zachthedude.github.io/abbf-website/" tabindex="-1" aria-hidden="true"><img src="images/abbf.jpg" alt="" loading="lazy"></a>
             <h3>ABBF website</h3>
-            <p>An accessible website for the Adventures Beyond Barriers Foundation, a community that breaks stereotypes around disability.</p>
+            <p>An accessible website for the Adventures Beyond Barriers Foundation, a community that breaks stereotypes around disability, with a built-in text size, contrast and motion toolbar.</p>
             <ul class="tags"><li>Web</li><li>Accessibility</li></ul>
-            <p class="proj-links"><a href="https://zachthedude.github.io/abbf-website/">Visit the site <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/abbf-website">Code</a></p>
+            <p class="proj-links"><a class="btn solid" href="https://zachthedude.github.io/abbf-website/" aria-label="Check out ABBF website">Check it out <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/zachthedude/abbf-website" aria-label="ABBF website source code on GitHub">Code</a></p>
           </article>
         </div>
       </div>
