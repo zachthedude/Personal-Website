@@ -45,7 +45,8 @@
     .lead{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;padding:64px 0 72px;align-items:end}
     .issue{font-size:14px;color:var(--soft);margin:0 0 28px;display:flex;gap:18px;flex-wrap:wrap}
     .issue b{color:var(--ink);font-weight:600}
-    .lead h1{font:800 clamp(56px,9vw,128px)/.9 var(--serif);letter-spacing:-.035em;margin:0 0 28px;font-variation-settings:'opsz' 144}
+    .lead .name{font:800 clamp(34px,4.4vw,56px)/1 var(--serif);letter-spacing:-.02em;margin:0 0 18px;padding-bottom:16px;border-bottom:3px solid var(--lane);display:inline-block}
+    .lead .tagline{font:800 clamp(56px,9vw,128px)/.9 var(--serif);letter-spacing:-.035em;margin:0 0 28px;font-variation-settings:'opsz' 144}
     .dek{font:400 clamp(20px,2.2vw,26px)/1.4 var(--serif);max-width:30ch;margin:0 0 32px}
     .lead-actions{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink)}
@@ -189,7 +190,8 @@
     <div class="wrap lead">
       <div>
         <p class="issue"><b>Kerala, India</b><span>Gamer, speaker, developer, leader</span></p>
-        <h1>Zachary Samuel</h1>
+        <h1 class="name">Zachary Samuel</h1>
+        <p class="tagline">Fast in the water. Sharp at the table.</p>
         <p class="dek">I started out chasing ranks in games, found my voice through declamation, then learned to build software and lead the people building it with me. This is that story.</p>
         <div class="lead-actions">
           <a class="btn solid" href="#story">Start the story</a>
