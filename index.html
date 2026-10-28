@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1b2c">
+  <meta name="description" content="Zachary Samuel: from competitive gaming to declamation and public speaking to building software and leading teams. Co-founder of Pathforge. Kerala, India.">
+  <title>Zachary Samuel</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e1b2c'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-weight='700' font-size='16' text-anchor='middle' fill='%23f7f8f6'%3EZS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --chalk:#f7f8f6; --tile:#e9eef0; --ink:#0e1b2c; --soft:#4a5868; --rule:#c9d3da;
+      --lane:#1f5fbf; --aqua:#7fd3d9; --gold:#c9a23a;
+      --serif:'Fraunces',Georgia,serif; --sans:'IBM Plex Sans',system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:72px}
+    body{margin:0;background:var(--chalk);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    :focus-visible{outline:3px solid var(--lane);outline-offset:3px}
+    .wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+    /* Image slots: show a lane-stripe panel with the expected filename until a photo exists */
+    .ph{position:relative;margin:0;overflow:hidden;background:
+      repeating-linear-gradient(90deg,transparent 0 46px,rgba(31,95,191,.10) 46px 48px),var(--tile)}
+    .ph::after{content:'Add ' attr(data-file);position:absolute;left:14px;bottom:12px;font-size:13px;color:var(--soft)}
+    .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+    .ph figcaption{position:absolute;z-index:2;left:0;bottom:0;padding:8px 12px;background:var(--chalk);font-size:13px;color:var(--soft)}
+
+    /* Masthead */
+    .mast{position:sticky;top:0;z-index:20;background:rgba(247,248,246,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+    .mast .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+    .logo{font:800 22px var(--serif);text-decoration:none;letter-spacing:-.02em}
+    .logo span{color:var(--lane)}
+    .mast nav{display:flex;gap:26px;font-size:14px}
+    .mast nav a{text-decoration:none;color:var(--soft)}
+    .mast nav a:hover{color:var(--ink)}
+    .mast .cta{font-size:14px;font-weight:600;text-decoration:none;background:var(--ink);color:var(--chalk);padding:9px 16px;border-radius:999px}
+
+    /* Lead story */
+    .lead{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;padding:64px 0 72px;align-items:end}
+    .issue{font-size:14px;color:var(--soft);margin:0 0 28px;display:flex;gap:18px;flex-wrap:wrap}
+    .issue b{color:var(--ink);font-weight:600}
+    .lead h1{font:800 clamp(56px,9vw,128px)/.9 var(--serif);letter-spacing:-.035em;margin:0 0 28px;font-variation-settings:'opsz' 144}
+    .dek{font:400 clamp(20px,2.2vw,26px)/1.4 var(--serif);max-width:30ch;margin:0 0 32px}
+    .lead-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink)}
+    .btn.solid{background:var(--lane);border-color:var(--lane);color:#fff}
+    .btn:hover{transform:translateY(-1px)}
+    .lead .ph{aspect-ratio:4/5;border-radius:4px}
+    .quote{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:22px;display:flex;justify-content:space-between;gap:24px;align-items:baseline}
+    .quote p{font:italic 400 22px/1.4 var(--serif);margin:0;max-width:44ch}
+    .quote span{font-size:14px;color:var(--soft);white-space:nowrap}
+
+    /* By the numbers */
+    .numbers{background:var(--ink);color:var(--chalk);padding:64px 0}
+    .numbers h2{font:600 15px var(--sans);color:var(--aqua);margin:0 0 28px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(247,248,246,.2)}
+    .stat{padding:26px 22px 4px 0;border-right:1px solid rgba(247,248,246,.2)}
+    .stat:last-child{border-right:0}
+    .stat + .stat{padding-left:22px}
+    .stat strong{display:block;font:800 clamp(52px,6.5vw,88px)/1 var(--serif);font-variant-numeric:tabular-nums;color:#fff}
+    .stat strong em{font-style:normal;color:var(--gold)}
+    .stat p{margin:10px 0 0;font-size:15px;color:#b9c6d3;max-width:22ch}
+
+    /* Section heads */
+    section.block{padding:96px 0;border-bottom:1px solid var(--rule)}
+    .head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:48px}
+    .head .kicker{font-size:14px;color:var(--lane);font-weight:600;padding-top:12px}
+    .head h2{font:600 clamp(36px,5vw,64px)/1.02 var(--serif);letter-spacing:-.025em;margin:0;max-width:18ch}
+    .head p{grid-column:2;margin:0;color:var(--soft);max-width:60ch}
+
+    /* Pool: medal lanes */
+    .pool{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .lanes{border-top:3px solid var(--ink)}
+    .lane-row{display:grid;grid-template-columns:110px 1fr 56px;align-items:center;gap:16px;padding:22px 0;border-bottom:1px dashed var(--rule)}
+    .lane-row dt{font-weight:600}
+    .lane-row dt small{display:block;font-weight:400;color:var(--soft);font-size:13px}
+    .track{height:34px;position:relative;background:repeating-linear-gradient(90deg,var(--tile) 0 calc(100%/13 - 3px),transparent calc(100%/13 - 3px) calc(100%/13))}
+    .track i{position:absolute;inset:0 auto 0 0;width:calc(var(--n)/13*100%);background:repeating-linear-gradient(90deg,var(--gold) 0 calc(100%/var(--n) - 3px),transparent calc(100%/var(--n) - 3px) calc(100%/var(--n)));transform-origin:left;transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+    .js .lanes:not(.in) .track i{transform:scaleX(0)}
+    .lane-row dd{margin:0;font:800 34px var(--serif);text-align:right}
+    .lanes-total{display:flex;justify-content:space-between;padding:18px 0;font-weight:600}
+    .pool .ph{aspect-ratio:4/5;border-radius:4px}
+    .pool .ph img{object-position:50% 25%}
+    .lead .ph img{object-position:45% 40%}
+    .speak-media{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px}
+    .speak-media .ph{aspect-ratio:4/5;border-radius:4px}
+    .speak-media .ph:first-child img{object-position:50% 30%}
+    .speak-media .ph:last-child img{object-position:35% 50%}
+    .pool-note{font-size:15px;color:var(--soft);margin:18px 0 0}
+
+    /* Speaking */
+    .speak{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .award{border-top:3px solid var(--lane);padding-top:20px}
+    .award .ph{aspect-ratio:3/2;border-radius:4px;margin-bottom:20px}
+    .award h3{font:600 26px/1.15 var(--serif);margin:0 0 6px}
+    .award .where{color:var(--lane);font-weight:600;font-size:15px;margin:0 0 10px}
+    .award p{margin:0;color:var(--soft);font-size:15px}
+
+    /* Story */
+    .story{display:grid;grid-template-columns:200px 1fr;gap:32px}
+    .story ol{list-style:none;margin:0;padding:0;counter-reset:ch}
+    .story li{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;padding:30px 0;border-top:1px solid var(--rule);counter-increment:ch}
+    .story li h3{font:600 28px/1.15 var(--serif);margin:0}
+    .story li h3::before{content:'Level ' counter(ch);display:block;font:600 14px var(--sans);color:var(--lane);margin-bottom:8px}
+    .story li p{margin:0;color:var(--soft)}
+    .story li p b{color:var(--ink);font-weight:600}
+
+    /* Work */
+    .work{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 24px}
+    .proj .ph{aspect-ratio:16/10;border-radius:4px;margin-bottom:18px}
+    .proj h3{font:600 26px/1.1 var(--serif);margin:0 0 8px}
+    .proj p{margin:0 0 14px;color:var(--soft);font-size:15px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+    .tags li{font-size:13px;padding:3px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--soft)}
+    .proj .cover{background:var(--ink);color:var(--chalk);display:flex;flex-direction:column;justify-content:flex-end;padding:22px}
+    .proj .cover::after{content:none}
+    .proj .cover b{font:800 clamp(40px,4.5vw,60px)/1 var(--serif);color:var(--aqua)}
+    .proj .cover span{font-size:14px;color:#b9c6d3;margin-top:8px}
+    .proj img{object-position:top}
+    .proj.feature{grid-column:span 2}
+    .proj.feature .ph{aspect-ratio:16/8}
+
+    .timelapse{margin:0 0 56px}
+    .timelapse video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;background:var(--ink)}
+    .timelapse figcaption{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;font-size:15px;color:var(--soft)}
+    .timelapse button{font:600 14px var(--sans);padding:7px 16px;border-radius:999px;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+
+    /* Honours list */
+    .honours{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+    .honours li{display:grid;grid-template-columns:90px 1fr auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--rule)}
+    .honours .count{font:800 34px var(--serif);color:var(--gold)}
+    .honours .name{font:600 20px/1.3 var(--serif)}
+    .honours .cat{font-size:14px;color:var(--soft)}
+
+    /* Contact */
+    .contact{background:var(--lane);color:#fff;padding:96px 0 32px}
+    .contact h2{font:800 clamp(48px,8vw,108px)/.95 var(--serif);letter-spacing:-.03em;margin:0 0 28px;max-width:12ch}
+    .contact p{font-size:19px;max-width:46ch;margin:0 0 32px;color:#dce8fa}
+    .contact .btn{border-color:#fff;color:#fff}
+    .contact .btn.solid{background:#fff;color:var(--lane)}
+    footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:88px;padding-top:20px;border-top:1px solid rgba(255,255,255,.3);font-size:14px;color:#dce8fa}
+    footer a{text-decoration:none}
+
+    @media (max-width:900px){
+      .mast nav{display:none}
+      .lead,.pool,.story{grid-template-columns:1fr;gap:36px}
+      .lead{padding-top:40px}
+      .stats{grid-template-columns:1fr 1fr}
+      .stat:nth-child(2){border-right:0}
+      .stat:nth-child(3){padding-left:0}
+      .stat:nth-child(n+3){border-top:1px solid rgba(247,248,246,.2)}
+      .head{grid-template-columns:1fr;gap:10px}
+      .head p{grid-column:1}
+      .speak,.work{grid-template-columns:1fr}
+      .proj.feature{grid-column:auto}
+      .story li{grid-template-columns:1fr;gap:12px}
+      .quote{flex-direction:column}
+      section.block{padding:68px 0}
+    }
+    @media (max-width:520px){
+      .lane-row{grid-template-columns:78px 1fr 40px;gap:10px}
+      .lane-row dd{font-size:26px}
+      .honours li{grid-template-columns:56px 1fr;gap:14px}
+      .honours .cat{grid-column:2}
+      .honours .count{font-size:28px}
+    }
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <script>document.documentElement.classList.add('js')</script>
+  <header class="mast">
+    <div class="wrap">
+      <a class="logo" href="#top">ZS<span>.</span></a>
+      <nav aria-label="Main">
+        <a href="#story">Games</a><a href="#speaking">Speaking</a><a href="#work">Building</a><a href="#leading">Leading</a><a href="#pool">Swimming</a><a href="#honours">Awards</a>
+      </nav>
+      <a class="cta" href="#contact">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap lead">
+      <div>
+        <p class="issue"><b>Kerala, India</b><span>Gamer, speaker, developer, leader</span></p>
+        <h1>Zachary Samuel</h1>
+        <p class="dek">I started out chasing ranks in games, found my voice through declamation, then learned to build software and lead the people building it with me. This is that story.</p>
+        <div class="lead-actions">
+          <a class="btn solid" href="#story">Start the story</a>
+          <a class="btn" href="#leading">See my roles</a>
+        </div>
+      </div>
+      <figure class="ph" data-file="images/portrait.jpg"><img src="images/portrait.jpg" alt="Portrait of Zachary Samuel" onerror="this.remove()"></figure>
+      <div class="quote">
+        <p>Competing taught me to prepare. Debating taught me to listen. Building lets me use both.</p>
+        <span>Zachary Samuel</span>
+      </div>
+    </div>
+
+    <section class="numbers" id="numbers" aria-labelledby="numbers-h">
+      <div class="wrap">
+        <h2 id="numbers-h">By the numbers</h2>
+        <div class="stats">
+          <div class="stat"><strong data-count="24">24</strong><p>Gold medals in breaststroke</p></div>
+          <div class="stat"><strong data-count="3">3</strong><p>Diplomacy awards at MUN and G20</p></div>
+          <div class="stat"><strong data-count="5">5</strong><p>Leadership roles, from co-founder to captain</p></div>
+          <div class="stat"><strong data-count="3">3</strong><p>Languages spoken fluently</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="story" aria-labelledby="story-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Chapter 1 · Games</span>
+          <h2 id="story-h">It started with a controller.</h2>
+          <p>Competitive gaming was my first training ground. It taught me to practise, lose, adjust and come back for another match.</p>
+        </div>
+        <div class="story">
+          <span></span>
+          <ol>
+            <li><h3>Fortnite, at the top</h3><p>I reached <b>Unreal</b>, Fortnite's highest competitive rank. It took practice, patience, quick decisions and always coming back for another match.</p></li>
+            <li><h3>Minecraft, a new challenge</h3><p>I moved to competitive Minecraft and reached <b>LT3</b>, one of the top tiers, in most game modes. Each mode had its own strategy to work out.</p></li>
+            <li><h3>From playing to making</h3><p>I got curious about the mechanics, rules and small choices that make a game feel right. So I started coding, and now I <b>build games and software</b> of my own.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="speaking" aria-labelledby="speak-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Chapter 2 · Speaking</span>
+          <h2 id="speak-h">Then I found my voice.</h2>
+          <p>Declamation came first: standing alone on a stage and delivering a speech as if every word were my own. I fell in love with it. That led me to Model United Nations and G20 simulations, where I represent a country, build alliances and defend positions under pressure.</p>
+        </div>
+        <div class="speak-media">
+          <figure class="ph" data-file="images/g20.jpg"><img src="images/g20.jpg" alt="Zachary at the IISP G20 2023, seated behind the Russia placard" loading="lazy"><figcaption>IISP G20 2023, delegate of Russia</figcaption></figure>
+          <figure class="ph" data-file="images/stage.jpg"><img src="images/stage.jpg" alt="Zachary on stage, waiting to speak" loading="lazy"><figcaption>Waiting to take the stage</figcaption></figure>
+        </div>
+        <div class="speak">
+          <article class="award">
+            <p class="where">IISP MUN</p>
+            <h3>Best Delegate</h3>
+            <p>Top delegate in committee, chosen for research, speeches and diplomacy.</p>
+          </article>
+          <article class="award">
+            <p class="where">IISP MUN</p>
+            <h3>Best Delegate, again</h3>
+            <p>Won the same top award a second time, at another IISP MUN.</p>
+          </article>
+          <article class="award">
+            <p class="where">IISP G20</p>
+            <h3>High Commendation</h3>
+            <p>Recognised for negotiation and policy work in a G20 summit simulation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Chapter 3 · Building</span>
+          <h2 id="work-h">Next, I learned to build.</h2>
+          <p>The curiosity that started with games turned into code. These are six things I'm building: games, learning tools and hardware, made with code and a team of AI agents.</p>
+        </div>
+        <figure class="timelapse">
+          <video src="images/timelapse.mp4" poster="images/timelapse-poster.jpg" muted loop playsinline preload="metadata" aria-label="Timelapse of Zachary coding at a desk"></video>
+          <figcaption><span>A build session at my desk, sped up.</span><button type="button" aria-pressed="false">Pause</button></figcaption>
+        </figure>
+        <div class="work">
+          <article class="proj">
+            <figure class="ph" data-file="images/aloud.jpg"><img src="images/aloud.jpg" alt="Aloud app screenshot" onerror="this.remove()"></figure>
+            <h3>Aloud</h3>
+            <p>A voice-first learning platform. Upload your study material and it becomes a teacher that explains each idea out loud, asks questions, listens to your answers and adapts.</p>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>Speech</li><li>Education</li></ul>
+          </article>
+          <article class="proj">
+            <figure class="ph" data-file="images/signwave.jpg"><img src="images/signwave.jpg" alt="Signwave app screenshot" onerror="this.remove()"></figure>
+            <h3>Signwave</h3>
+            <p>Play music with your hands. A webcam reads hand signs and turns them into synth, bass and guitar notes in real time.</p>
+            <ul class="tags"><li>Computer vision</li><li>Web Audio</li></ul>
+          </article>
+          <article class="proj">
+            <div class="ph cover" aria-hidden="true"><b>4 waves</b><span>3, 4, 6, 8 enemies</span></div>
+            <h3>ArenaSlice</h3>
+            <p>A first-person arena shooter in Unity with sliding movement, enemy AI that sees and hears you, and four waves to survive.</p>
+            <ul class="tags"><li>Unity</li><li>C#</li><li>Game design</li></ul>
+          </article>
+          <article class="proj">
+            <div class="ph cover" aria-hidden="true"><b>4–12 Hz</b><span>tremor cancelled, intent followed</span></div>
+            <h3>Steady Utensil</h3>
+            <p>A 3D-printed self-stabilising spoon for people with hand tremors. It cancels the shake but still follows the hand to the mouth.</p>
+            <ul class="tags"><li>Hardware</li><li>Firmware</li><li>Accessibility</li></ul>
+          </article>
+          <article class="proj">
+            <figure class="ph" data-file="images/lifequest.jpg"><img src="images/lifequest.jpg" alt="LifeQuest app screenshot" onerror="this.remove()"></figure>
+            <h3>LifeQuest</h3>
+            <p>Real life as a game. Earn XP for real actions in fitness, learning and building, from level 1 to 100.</p>
+            <ul class="tags"><li>Python</li><li>Web app</li></ul>
+          </article>
+          <article class="proj">
+            <figure class="ph" data-file="images/abbf.jpg"><img src="images/abbf.jpg" alt="Adventures Beyond Barriers Foundation website" onerror="this.remove()"></figure>
+            <h3>ABBF website</h3>
+            <p>An accessible website for the Adventures Beyond Barriers Foundation, a community that breaks stereotypes around disability.</p>
+            <ul class="tags"><li>Web</li><li>Accessibility</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="leading" aria-labelledby="lead-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Chapter 4 · Leading</span>
+          <h2 id="lead-h">And learned to bring people with me.</h2>
+          <p>Building alone only goes so far. Speaking taught me to hold a room; working in teams taught me to listen to one. Now I help found, organise and run teams in tech and in sport, and I can do it in three languages.</p>
+        </div>
+        <ul class="honours">
+          <li><span class="count">01</span><span class="name">Co-Founder</span><span class="cat">Pathforge</span></li>
+          <li><span class="count">02</span><span class="name">Chief Operating Officer</span><span class="cat">CTRL ALT EXPL</span></li>
+          <li><span class="count">03</span><span class="name">Head of Logistics and Planning</span><span class="cat">Synthica</span></li>
+          <li><span class="count">04</span><span class="name">Former Head of Chapters</span><span class="cat">ByteByByte</span></li>
+          <li><span class="count">05</span><span class="name">Captain of two sports teams</span><span class="cat">Sport</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="pool" aria-labelledby="pool-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Alongside it all · Swimming</span>
+          <h2 id="pool-h">24 golds across three breaststroke events.</h2>
+          <p>Breaststroke is the most technical stroke, where timing counts as much as strength. These are my gold medals by distance.</p>
+        </div>
+        <div class="pool">
+          <div>
+            <dl class="lanes">
+              <div class="lane-row"><dt>100m<small>Breaststroke</small></dt><div class="track"><i style="--n:13"></i></div><dd>13</dd></div>
+              <div class="lane-row"><dt>200m<small>Breaststroke</small></dt><div class="track"><i style="--n:6"></i></div><dd>6</dd></div>
+              <div class="lane-row"><dt>50m<small>Breaststroke</small></dt><div class="track"><i style="--n:5"></i></div><dd>5</dd></div>
+            </dl>
+            <div class="lanes-total"><span>Total gold medals</span><span>24</span></div>
+          </div>
+          <div>
+            <figure class="ph" data-file="images/podium.jpg"><img src="images/podium.jpg" alt="Zachary on the podium holding a trophy, wearing his medals" loading="lazy"></figure>
+            <p class="pool-note">On the podium at an Indus International School swim meet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="honours" aria-labelledby="hon-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Awards</span>
+          <h2 id="hon-h">Every award, in one list.</h2>
+        </div>
+        <ul class="honours">
+          <li><span class="count">13×</span><span class="name">Gold medal, 100m breaststroke</span><span class="cat">Swimming</span></li>
+          <li><span class="count">6×</span><span class="name">Gold medal, 200m breaststroke</span><span class="cat">Swimming</span></li>
+          <li><span class="count">5×</span><span class="name">Gold medal, 50m breaststroke</span><span class="cat">Swimming</span></li>
+          <li><span class="count">2×</span><span class="name">Best Delegate, IISP MUN</span><span class="cat">Public speaking</span></li>
+          <li><span class="count">1×</span><span class="name">High Commendation, IISP G20</span><span class="cat">Public speaking</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">Let's work together.</h2>
+      <p>Interested in a project, a collaboration or a speaking event? My code and contact details are on GitHub.</p>
+      <div class="lead-actions">
+        <a class="btn solid" href="https://github.com/zachthedude" rel="noopener">Find me on GitHub</a>
+      </div>
+      <footer><span>© <span id="year">2026</span> Zachary Samuel</span><span>Kerala, India</span><a href="#top">Back to top</a></footer>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // One orchestrated moment: numbers count up and medal lanes fill when they scroll into view.
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      e.target.classList.add('in');
+      if (still) return;
+      e.target.querySelectorAll('[data-count]').forEach(el => {
+        const end = +el.dataset.count, t0 = performance.now();
+        const tick = t => { const p = Math.min(1, (t - t0) / 1200); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+        requestAnimationFrame(tick);
+      });
+    }), {threshold: .35});
+    document.querySelectorAll('.stats, .lanes').forEach(el => io.observe(el));
+
+    // Timelapse plays only while on screen; reduced-motion visitors start it themselves.
+    const vid = document.querySelector('.timelapse video'), btn = document.querySelector('.timelapse button');
+    let userPaused = still;
+    const label = () => { btn.textContent = vid.paused ? 'Play' : 'Pause'; btn.setAttribute('aria-pressed', vid.paused); };
+    btn.addEventListener('click', () => { userPaused = !vid.paused; vid.paused ? vid.play() : vid.pause(); });
+    vid.addEventListener('play', label); vid.addEventListener('pause', label); label();
+    new IntersectionObserver(([e]) => { if (!e.isIntersecting) vid.pause(); else if (!userPaused) vid.play().catch(() => {}); }, {threshold: .4}).observe(vid);
+  </script>
+</body>
+</html>
