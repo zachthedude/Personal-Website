@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0e1b2c">
-  <meta name="description" content="Zachary Samuel: competitive breaststroke swimmer with 24 gold medals, two-time Best Delegate, and builder of games, tools and learning software. Kerala, India.">
+  <meta name="description" content="Zachary Samuel: from competitive gaming to declamation and public speaking to building software and leading teams. Co-founder of Pathforge. Kerala, India.">
   <title>Zachary Samuel</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e1b2c'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-weight='700' font-size='16' text-anchor='middle' fill='%23f7f8f6'%3EZS%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +45,8 @@
     .lead{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;padding:64px 0 72px;align-items:end}
     .issue{font-size:14px;color:var(--soft);margin:0 0 28px;display:flex;gap:18px;flex-wrap:wrap}
     .issue b{color:var(--ink);font-weight:600}
-    .lead h1{font:800 clamp(56px,9vw,128px)/.9 var(--serif);letter-spacing:-.035em;margin:0 0 28px;font-variation-settings:'opsz' 144}
+    .lead .name{font:800 clamp(34px,4.4vw,56px)/1 var(--serif);letter-spacing:-.02em;margin:0 0 18px;padding-bottom:16px;border-bottom:3px solid var(--lane);display:inline-block}
+    .lead .tagline{font:800 clamp(56px,9vw,128px)/.9 var(--serif);letter-spacing:-.035em;margin:0 0 28px;font-variation-settings:'opsz' 144}
     .dek{font:400 clamp(20px,2.2vw,26px)/1.4 var(--serif);max-width:30ch;margin:0 0 32px}
     .lead-actions{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink)}
@@ -107,7 +108,7 @@
     .story ol{list-style:none;margin:0;padding:0;counter-reset:ch}
     .story li{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;padding:30px 0;border-top:1px solid var(--rule);counter-increment:ch}
     .story li h3{font:600 28px/1.15 var(--serif);margin:0}
-    .story li h3::before{content:'Chapter ' counter(ch);display:block;font:600 14px var(--sans);color:var(--lane);margin-bottom:8px}
+    .story li h3::before{content:'Level ' counter(ch);display:block;font:600 14px var(--sans);color:var(--lane);margin-bottom:8px}
     .story li p{margin:0;color:var(--soft)}
     .story li p b{color:var(--ink);font-weight:600}
 
@@ -185,7 +186,7 @@
     <div class="wrap">
       <a class="logo" href="#top">ZS<span>.</span></a>
       <nav aria-label="Main">
-        <a href="#numbers">Numbers</a><a href="#pool">Swimming</a><a href="#speaking">Speaking</a><a href="#story">Story</a><a href="#work">Projects</a><a href="#honours">Awards</a>
+        <a href="#story">Games</a><a href="#speaking">Speaking</a><a href="#work">Building</a><a href="#leading">Leading</a><a href="#pool">Swimming</a><a href="#honours">Awards</a>
       </nav>
       <a class="cta" href="#contact">Get in touch</a>
     </div>
@@ -194,12 +195,13 @@
   <main id="top">
     <div class="wrap lead">
       <div>
-        <p class="issue"><b>Zachary Samuel</b><span>Kerala, India</span><span>Student, swimmer, delegate, developer</span></p>
-        <h1>Fast in the water. Sharp at the table.</h1>
-        <p class="dek">A competitive breaststroke swimmer with 24 gold medals, a two-time Best Delegate, and a builder of games, tools and learning software.</p>
+        <p class="issue"><b>Kerala, India</b><span>Gamer, speaker, developer, leader</span></p>
+        <h1 class="name">Zachary Samuel</h1>
+        <p class="tagline">Fast in the water. Sharp at the table.</p>
+        <p class="dek">I started out chasing ranks in games, found my voice through declamation, then learned to build software and lead the people building it with me. This is that story.</p>
         <div class="lead-actions">
-          <a class="btn solid" href="#work">See my projects</a>
-          <a class="btn" href="#honours">View all awards</a>
+          <a class="btn solid" href="#story">Start the story</a>
+          <a class="btn" href="#leading">See my roles</a>
         </div>
       </div>
       <figure class="ph" data-file="images/portrait.jpg"><img src="images/portrait.jpg" alt="Portrait of Zachary Samuel" onerror="this.remove()"></figure>
@@ -214,33 +216,27 @@
         <h2 id="numbers-h">By the numbers</h2>
         <div class="stats">
           <div class="stat"><strong data-count="24">24</strong><p>Gold medals in breaststroke</p></div>
-          <div class="stat"><strong data-count="27">27</strong><p>Awards and recognitions in total</p></div>
           <div class="stat"><strong data-count="3">3</strong><p>Diplomacy awards at MUN and G20</p></div>
-          <div class="stat"><strong data-count="6">6</strong><p>Projects built or in progress</p></div>
+          <div class="stat"><strong data-count="5">5</strong><p>Leadership roles, from co-founder to captain</p></div>
+          <div class="stat"><strong data-count="3">3</strong><p>Languages spoken fluently</p></div>
         </div>
       </div>
     </section>
 
-    <section class="block" id="pool" aria-labelledby="pool-h">
+    <section class="block" id="story" aria-labelledby="story-h">
       <div class="wrap">
         <div class="head">
-          <span class="kicker">In the pool</span>
-          <h2 id="pool-h">24 golds across three breaststroke events.</h2>
-          <p>Breaststroke is the most technical stroke, where timing counts as much as strength. These are my gold medals by distance.</p>
+          <span class="kicker">Chapter 1 · Games</span>
+          <h2 id="story-h">It started with a controller.</h2>
+          <p>Competitive gaming was my first training ground. It taught me to practise, lose, adjust and come back for another match.</p>
         </div>
-        <div class="pool">
-          <div>
-            <dl class="lanes">
-              <div class="lane-row"><dt>100m<small>Breaststroke</small></dt><div class="track"><i style="--n:13"></i></div><dd>13</dd></div>
-              <div class="lane-row"><dt>200m<small>Breaststroke</small></dt><div class="track"><i style="--n:6"></i></div><dd>6</dd></div>
-              <div class="lane-row"><dt>50m<small>Breaststroke</small></dt><div class="track"><i style="--n:5"></i></div><dd>5</dd></div>
-            </dl>
-            <div class="lanes-total"><span>Total gold medals</span><span>24</span></div>
-          </div>
-          <div>
-            <figure class="ph" data-file="images/podium.jpg"><img src="images/podium.jpg" alt="Zachary on the podium holding a trophy, wearing his medals" loading="lazy"></figure>
-            <p class="pool-note">On the podium at an Indus International School swim meet.</p>
-          </div>
+        <div class="story">
+          <span></span>
+          <ol>
+            <li><h3>Fortnite, at the top</h3><p>I reached <b>Unreal</b>, Fortnite's highest competitive rank. It took practice, patience, quick decisions and always coming back for another match.</p></li>
+            <li><h3>Minecraft, a new challenge</h3><p>I moved to competitive Minecraft and reached <b>LT3</b>, one of the top tiers, in most game modes. Each mode had its own strategy to work out.</p></li>
+            <li><h3>From playing to making</h3><p>I got curious about the mechanics, rules and small choices that make a game feel right. So I started coding, and now I <b>build games and software</b> of my own.</p></li>
+          </ol>
         </div>
       </div>
     </section>
@@ -248,9 +244,9 @@
     <section class="block" id="speaking" aria-labelledby="speak-h">
       <div class="wrap">
         <div class="head">
-          <span class="kicker">Public speaking</span>
-          <h2 id="speak-h">Winning arguments, not just races.</h2>
-          <p>At Model United Nations and G20 simulations I represent a country, build alliances and defend positions under pressure.</p>
+          <span class="kicker">Chapter 2 · Speaking</span>
+          <h2 id="speak-h">Then I found my voice.</h2>
+          <p>Declamation came first: standing alone on a stage and delivering a speech as if every word were my own. I fell in love with it. That led me to Model United Nations and G20 simulations, where I represent a country, build alliances and defend positions under pressure.</p>
         </div>
         <div class="speak-media">
           <figure class="ph" data-file="images/g20.jpg"><img src="images/g20.jpg" alt="Zachary at the IISP G20 2023, seated behind the Russia placard" loading="lazy"><figcaption>IISP G20 2023, delegate of Russia</figcaption></figure>
@@ -276,30 +272,12 @@
       </div>
     </section>
 
-    <section class="block" id="story" aria-labelledby="story-h">
-      <div class="wrap">
-        <div class="head">
-          <span class="kicker">How it started</span>
-          <h2 id="story-h">First I learned to play. Then I wanted to build.</h2>
-          <p>After years of competitive gaming I stopped asking only how to get better and started asking how someone made the game.</p>
-        </div>
-        <div class="story">
-          <span></span>
-          <ol>
-            <li><h3>Fortnite, at the top</h3><p>I reached <b>Unreal</b>, Fortnite's highest competitive rank. It took practice, patience, quick decisions and always coming back for another match.</p></li>
-            <li><h3>Minecraft, a new challenge</h3><p>I moved to competitive Minecraft and reached <b>LT3</b>, one of the top tiers, in most game modes. Each mode had its own strategy to work out.</p></li>
-            <li><h3>From playing to making</h3><p>I got curious about the mechanics, rules and small choices that make a game feel right. So I started coding, and now I <b>build games and software</b> of my own.</p></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
     <section class="block" id="work" aria-labelledby="work-h">
       <div class="wrap">
         <div class="head">
-          <span class="kicker">Projects</span>
-          <h2 id="work-h">Six things I'm building.</h2>
-          <p>Games, learning tools and hardware, built with code and a team of AI agents.</p>
+          <span class="kicker">Chapter 3 · Building</span>
+          <h2 id="work-h">Next, I learned to build.</h2>
+          <p>The curiosity that started with games turned into code. These are six things I'm building: games, learning tools and hardware, made with code and a team of AI agents.</p>
         </div>
         <figure class="timelapse">
           <video src="images/timelapse.mp4" poster="images/timelapse-poster.jpg" muted loop playsinline preload="metadata" aria-label="Timelapse of Zachary coding at a desk"></video>
@@ -348,6 +326,47 @@
             <ul class="tags"><li>Web</li><li>Accessibility</li></ul>
             <p class="proj-links"><a href="https://zachthedude.github.io/abbf-website/">Visit the site <span aria-hidden="true">↗</span></a><a href="https://github.com/zachthedude/abbf-website">Code</a></p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="leading" aria-labelledby="lead-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Chapter 4 · Leading</span>
+          <h2 id="lead-h">And learned to bring people with me.</h2>
+          <p>Building alone only goes so far. Speaking taught me to hold a room; working in teams taught me to listen to one. Now I help found, organise and run teams in tech and in sport, and I can do it in three languages.</p>
+        </div>
+        <ul class="honours">
+          <li><span class="count">01</span><span class="name">Co-Founder</span><span class="cat">Pathforge</span></li>
+          <li><span class="count">02</span><span class="name">Chief Operating Officer</span><span class="cat">CTRL ALT EXPL</span></li>
+          <li><span class="count">03</span><span class="name">Head of Logistics and Planning</span><span class="cat">Synthica</span></li>
+          <li><span class="count">04</span><span class="name">Former Head of Chapters</span><span class="cat">ByteByByte</span></li>
+          <li><span class="count">05</span><span class="name">Captain of two sports teams</span><span class="cat">Sport</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="pool" aria-labelledby="pool-h">
+      <div class="wrap">
+        <div class="head">
+          <span class="kicker">Alongside it all · Swimming</span>
+          <h2 id="pool-h">24 golds across three breaststroke events.</h2>
+          <p>Breaststroke is the most technical stroke, where timing counts as much as strength. These are my gold medals by distance.</p>
+        </div>
+        <div class="pool">
+          <div>
+            <dl class="lanes">
+              <div class="lane-row"><dt>100m<small>Breaststroke</small></dt><div class="track"><i style="--n:13"></i></div><dd>13</dd></div>
+              <div class="lane-row"><dt>200m<small>Breaststroke</small></dt><div class="track"><i style="--n:6"></i></div><dd>6</dd></div>
+              <div class="lane-row"><dt>50m<small>Breaststroke</small></dt><div class="track"><i style="--n:5"></i></div><dd>5</dd></div>
+            </dl>
+            <div class="lanes-total"><span>Total gold medals</span><span>24</span></div>
+          </div>
+          <div>
+            <figure class="ph" data-file="images/podium.jpg"><img src="images/podium.jpg" alt="Zachary on the podium holding a trophy, wearing his medals" loading="lazy"></figure>
+            <p class="pool-note">On the podium at an Indus International School swim meet.</p>
+          </div>
         </div>
       </div>
     </section>
